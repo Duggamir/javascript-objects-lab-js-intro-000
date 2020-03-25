@@ -9,7 +9,8 @@ function updateObjectWithKeyAndValue(object, key, value)
 
 function destructivelyUpdateObjectWithKeyAndValue(object, key, value)
 {
-  var newPair = {key:value};
+  var newPair = {};
+  newPair[key] = value;
   Object.assign(object, newPair);
   return object;
 }
